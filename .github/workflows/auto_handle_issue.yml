@@ -1,4 +1,4 @@
-name: 'issues×Ô¶¯¹ÜÀí¼§'
+name: 'issuesè‡ªåŠ¨ç®¡ç†å§¬'
 
 on:
   schedule:
@@ -11,7 +11,7 @@ jobs:
   automatic_issues:
     runs-on: ubuntu-latest
     steps:
-      - name: ×Ô¶¯¹Ø±ÕÓĞdone±êÇ©ÇÒ7ÌìÄÚÎŞ»Ø¸´µÄissue
+      - name: è‡ªåŠ¨å…³é—­æœ‰doneæ ‡ç­¾ä¸”7å¤©å†…æ— å›å¤çš„issue
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: actions-cool/issues-helper@v2.0.0
         with:
@@ -19,21 +19,21 @@ jobs:
           labels: 'done'
           inactive-day: 7
           body: |
-            ´ËissueÒÑ¾­±»Ìí¼ÓÁËdone±êÇ©ÇÒÒÑ¾­³¬¹ı7ÌìÃ»ÓĞ»îÔ¾£¬ÎªÁË¼õÉÙissueÊıÁ¿´Ëissue½«±»×Ô¶¯¹Ø±Õ£¬Èç´ËissueÎÊÌâÈÔÎ´½â¾öÇëÊÖ¶¯ÖØĞÂ´ò¿ª±¾issue
+            æ­¤issueå·²ç»è¢«æ·»åŠ äº†doneæ ‡ç­¾ä¸”å·²ç»è¶…è¿‡7å¤©æ²¡æœ‰æ´»è·ƒï¼Œä¸ºäº†å‡å°‘issueæ•°é‡æ­¤issueå°†è¢«è‡ªåŠ¨å…³é—­ï¼Œå¦‚æ­¤issueé—®é¢˜ä»æœªè§£å†³è¯·æ‰‹åŠ¨é‡æ–°æ‰“å¼€æœ¬issue
             
-            --------------------------------------------------------------------------------------- À´×Ô 88-AutoSignMachine issues×Ô¶¯¹ÜÀí¼§
+            --------------------------------------------------------------------------------------- æ¥è‡ª simo8102/chinaunicom-AutoSignMachine issuesè‡ªåŠ¨ç®¡ç†å§¬
           contents: 'laugh,heart,rocket'
       
-      - name: ×Ô¶¯»Ø¸´ĞÂ½¨µÄissue
+      - name: è‡ªåŠ¨å›å¤æ–°å»ºçš„issue
         if: github.event_name == 'issues' && github.event.action == 'opened' && github.event.issue.author_association != 'OWNER'
         uses: actions-cool/issues-helper@v2.0.0
         with:
           actions: 'create-comment'
           issue-number: ${{ github.event.issue.number }}
           body: |
-            ÄãºÃ @${{ github.event.issue.user.login }} »¶Ó­´´½¨issue¡£
-            1. ÒòÎªÁªÍ¨ÒÑ¾­¹Ø±Õ»òÕß¸ü¸ÄÁËÒµÎñËùÒÔ±¾ÏîÄ¿´ó²¿·Ö¹¦ÄÜÒÑ¾­Ê§Ğ§²¢²»ÔÚÖ§³Ö£¬ËùÒÔÉ¾³ıÁË±¾ÏîÄ¿ËùÓĞ´úÂë¡£
-            2. Çë×ÔĞĞÑ°ÕÒÀàËÆµÃ½Å±¾Ê¹ÓÃ£¬Ò²¸ĞĞ»´ó¼Ò³¤¾ÃÒÔÀ´µÃÖ§³Ö
+            ä½ å¥½ @${{ github.event.issue.user.login }} æ¬¢è¿åˆ›å»ºissueã€‚
+            1. å› ä¸ºè”é€šå·²ç»å…³é—­æˆ–è€…æ›´æ”¹äº†ä¸šåŠ¡æ‰€ä»¥æœ¬é¡¹ç›®å¤§éƒ¨åˆ†åŠŸèƒ½å·²ç»å¤±æ•ˆå¹¶ä¸åœ¨æ”¯æŒï¼Œæ‰€ä»¥åˆ é™¤äº†æœ¬é¡¹ç›®æ‰€æœ‰ä»£ç ã€‚
+            2. è¯·è‡ªè¡Œå¯»æ‰¾ç±»ä¼¼å¾—è„šæœ¬ä½¿ç”¨ï¼Œä¹Ÿæ„Ÿè°¢å¤§å®¶é•¿ä¹…ä»¥æ¥å¾—æ”¯æŒ
             
-            --------------------------------------------------------------------------------------- À´×Ô 88-AutoSignMachine issues×Ô¶¯¹ÜÀí¼§
+            --------------------------------------------------------------------------------------- æ¥è‡ª simo8102/chinaunicom-AutoSignMachine issuesè‡ªåŠ¨ç®¡ç†å§¬
           contents: 'laugh,heart,rocket'
